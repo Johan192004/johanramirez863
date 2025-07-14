@@ -1,0 +1,30 @@
+{
+    "users":[
+        {
+        "id":"1",
+        "name": "David Gomez",
+        "email": "david@gmail.com",
+        "password": "password",
+        "role": "admin"
+    },{
+        "id":"2",
+        "name": "Salomon Ruiz",
+        "email": "salomon@gmail.com",
+        "password": "password",
+        "role": "visitor"   
+    }
+    ],
+    "events":[
+        {
+            "id":"1",
+            "name": "Event title",
+            "description": "The description of the event",
+            "capacity":"15",
+            "date":"08-12-2024",
+            "visitorsEnrolledId":[
+                "2"
+            ]
+        }
+
+    ]
+}
