@@ -3,6 +3,14 @@
 
 This project is about login, register, and the management of the events by the admin. The visitors users also can enroll to events.
 
+## Tecnologies
+
+- Bootstrap
+- Javascript
+- Html
+- Css
+- Json-server
+
 ## Installation / Usage
 
 ### Clone the repository
@@ -28,6 +36,25 @@ npm json-server db.json
 
 ### Open live server
 Install and run the extension of Visual studio Code, which is the one called **Live Server**
+
+
+## Features
+
+### Admin
+
+- Delete events
+- Add events
+- See current events
+
+### Visitor
+
+- Enroll to event
+- See current events
+- See current enrollments
+
+### Login
+
+### Register
 
 ## Info
 
