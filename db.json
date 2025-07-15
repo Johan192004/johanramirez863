@@ -20,6 +20,13 @@
       "password": "password",
       "role": "visitor",
       "id": "uUVcXUh"
+    },
+    {
+      "name": "dsadsad",
+      "email": "dnsajkd213nksaj@bdhsabd.com",
+      "password": "12",
+      "role": "visitor",
+      "id": "JhLLUxx"
     }
   ],
   "events": [
@@ -28,7 +35,9 @@
       "description": "fdsfsdf",
       "capacity": "213",
       "date": "2025-07-04",
-      "visitorsEnrolledId": [],
+      "visitorsEnrolledId": [
+        "2"
+      ],
       "id": "6Jy8UPm"
     }
   ]

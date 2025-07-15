@@ -55,7 +55,7 @@ export async function scriptRegister(){
             if(passwordVale == passwordCValue){
                 postUser(fullnameValue,emailValue,passwordVale)
 
-                window.location.hash = "#/logIn"
+                window.location.hash = ""
             } 
 
         }

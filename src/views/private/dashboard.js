@@ -94,41 +94,6 @@ export async function scriptDashboard(){
 
 }
 
-async function showEvents(){
-    const dashboardContainer = document.getElementById("dashboard")
-    
-    let events = await getEventsAdmin()
-
-    if(window.sessionStorage.getItem("role") == "admin"){
-
-        dashboardContainer.innerHTML = `<table><thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Capacity</th>
-            <th>Date</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
-        </table>`
-
-        const tableBody = document.getElementById("tableBody")
-
-        events.forEach(element => {
-            tableBody.innerHTML += `<tr>
-            <th>${element.name}<th>
-            <th>${element.description}<th>
-            <th>${element.capacity}<th>
-            <th>${element.date}<th>
-            <th>Botones</th>
-            </tr>`
-        });
-
-    }
-
-}
 
 
 async function getEventsAdmin(){
@@ -336,17 +301,26 @@ async function chargeTableVisitor(dashboardContainer,eventsParameter){
             <td>${element.description}<th>
             <td>${element.capacity}<th>
             <td>${element.date}<th>
-            <td>Estoy</th>
+            <td><button class="btn btn-primary" disabled>Enroll</button></th>
             </tr>`
 
         } else {
-            tableBody.innerHTML += `<tr>
+            tableBody.innerHTML += `<tr class="${element.id}">
             <th scope="row">${element.name}<th>
             <td>${element.description}<th>
             <td>${element.capacity}<th>
             <td>${element.date}<th>
-            <td>No estoy</th>
+            <td><button class="btn btn-primary" id="enrollButton">Enroll</button></th>
             </tr>`
+
+
+            const enrollButton = document.getElementById("enrollButton")
+            const trNearest = enrollButton.closest("tr")
+            enrollButton.addEventListener("click",(e)=>{
+                let idEvent = trNearest.getAttribute("class")
+                enrollToEvent(idEvent)
+            })
+
         }
 
         
@@ -397,7 +371,7 @@ function showEnrollments(container, eventsParameter){
             <td>${element.description}<th>
             <td>${element.capacity}<th>
             <td>${element.date}<th>
-            <td>Estoy</th>
+            <td></th>
             </tr>`
 
         } else {
@@ -423,5 +397,31 @@ function deleteEvent(who){
         "headers":{
             "Content-Type":"application/json"
         }
+    })
+}
+
+async function enrollToEvent(id){
+    let events = await getEventsAdmin()
+    let chosenEvent;
+    let pastEnrollers;
+
+    for(const event of events){
+        if(event.id == id){
+            chosenEvent = event
+            pastEnrollers = event.visitorsEnrolledId
+        }
+    }
+
+    let eventsEnrollers = pastEnrollers
+    eventsEnrollers.push(window.sessionStorage.getItem("id"))
+    
+    fetch(URL + "/events" + "/" + `${id}`,{
+        "method":"PATCH",
+        "headers":{
+            "Content-Type":"application/json"
+        },
+        "body": JSON.stringify({
+            visitorsEnrolledId : eventsEnrollers
+        })
     })
 }
