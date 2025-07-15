@@ -13,35 +13,16 @@
       "email": "salomon@gmail.com",
       "password": "password",
       "role": "visitor"
+    },
+    {
+      "name": "dnasjkdn",
+      "email": "dnsajkdnksaj@bdhsabd.com",
+      "password": "password",
+      "role": "visitor",
+      "id": "uUVcXUh"
     }
   ],
   "events": [
-    {
-      "id": "1",
-      "name": "Event title",
-      "description": "The description of the event",
-      "capacity": "15",
-      "date": "2024-05-02",
-      "visitorsEnrolledId": [
-        "2"
-      ]
-    },
-    {
-      "name": "dasd",
-      "description": "dadsfsd",
-      "capacity": "34",
-      "date": "2025-07-03",
-      "visitorsEnrolledId": [],
-      "id": "jy3mUuZ"
-    },
-    {
-      "name": "dmsakmdl",
-      "description": "mdlkasmdkl",
-      "capacity": "45",
-      "date": "2025-07-03",
-      "visitorsEnrolledId": [],
-      "id": "pPGuXzU"
-    },
     {
       "name": "dsad",
       "description": "fdsfsdf",

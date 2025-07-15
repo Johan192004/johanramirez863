@@ -74,12 +74,6 @@ export async function scriptDashboard(){
     if(window.sessionStorage.getItem("role") == "admin"){
 
         chargeTable(dashboardContainer,events)
-
-        
-
-
-       
-
         
 
     } else {
@@ -163,12 +157,15 @@ async function chargeTable(dashboardContainer,eventsParameter){
     const tableBody = document.getElementById("tableBody")
 
     eventsParameter.forEach(element => {
-        tableBody.innerHTML += `<tr>
+        tableBody.innerHTML += `<tr class="${element.id}">
         <th scope="row">${element.name}<th>
         <td>${element.description}<th>
         <td>${element.capacity}<th>
         <td>${element.date}<th>
-        <td>Botones</th>
+        <td><div class="d-flex flex-row">
+            <button class="btn btn-primary" id="editButton">Edit</button>
+            <button class="btn btn-secondary" id="deleteButtonEvent">Delete</button>
+        </div></th>
         </tr>`
 
         const newEventButton = document.getElementById("addNewEvent")
@@ -248,6 +245,26 @@ async function chargeTable(dashboardContainer,eventsParameter){
 
         })
 
+        })
+
+        
+        
+
+
+        const editButton = document.getElementById("editButton")
+        let trElement = editButton.closest("tr")
+        let idEvent = trElement.getAttribute("class")
+        editButton.addEventListener("click",()=>{
+
+            
+            
+
+        })
+
+        const deleteButton = document.getElementById("deleteButtonEvent")
+        deleteButton.addEventListener("click",(e)=>{
+            e.preventDefault()
+            deleteEvent(idEvent)
         })
 
         
@@ -399,6 +416,12 @@ function showEnrollments(container, eventsParameter){
 
 }
 
-function chargeViewVisitor(container, eventsParameter){
-    chargeTableVisitor()
+
+function deleteEvent(who){
+    fetch(URL + "/events" +"/"+ who,{
+        "method":"DELETE",
+        "headers":{
+            "Content-Type":"application/json"
+        }
+    })
 }

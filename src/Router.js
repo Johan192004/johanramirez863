@@ -1,10 +1,13 @@
 import { logInView, scriptLogIn } from "./views/public/logIn.js";
 import { notFoundView } from "./views/public/not-found.js";
 import { viewDashboard, scriptDashboard } from "./views/private/dashboard.js";
+import { registerView, scriptRegister } from "./views/public/register.js";
 
 export const routes = {
     "#/logIn": [logInView, scriptLogIn],
-    "#/dashboard":[viewDashboard, scriptDashboard]
+    "#/dashboard":[viewDashboard, scriptDashboard],
+    "#/register":[registerView, scriptRegister]
+
 }
 
 

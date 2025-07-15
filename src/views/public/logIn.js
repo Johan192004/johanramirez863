@@ -18,6 +18,7 @@ export function logInView(){
                                     <input type="password" name="password" id="password" class="form-control">
                                     <button type="submit" class="btn btn-primary w-100 mt-3" id="logInButton">Log in</button>
                                 </form>
+                                <a id="link">Don't have an account? register</a>
                             </div>
                         </div>
                     </div>
@@ -57,6 +58,14 @@ export async function scriptLogIn(){
             }
 
         }
+    })
+
+
+    const aRegister = document.getElementById("link")
+    aRegister.addEventListener("click",(e)=>{
+        e.preventDefault()
+        window.location.hash = "#/register"
+
     })
     
 }
