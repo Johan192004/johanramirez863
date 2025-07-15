@@ -9,6 +9,9 @@ function checkLogIn(){
         render(routes["#/logIn"][0]())
         routes["#/logIn"][1]()
         console.log(window.location.hash)
+    } else {
+        render(routes["#/dashboard"][0]())
+        routes["#/dashboard"][1]()
     }
 }
 

@@ -1,30 +1,54 @@
 {
-    "users":[
-        {
-        "id":"1",
-        "name": "David Gomez",
-        "email": "david@gmail.com",
-        "password": "password",
-        "role": "admin"
-    },{
-        "id":"2",
-        "name": "Salomon Ruiz",
-        "email": "salomon@gmail.com",
-        "password": "password",
-        "role": "visitor"   
+  "users": [
+    {
+      "id": "1",
+      "name": "David Gomez",
+      "email": "david@gmail.com",
+      "password": "password",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Salomon Ruiz",
+      "email": "salomon@gmail.com",
+      "password": "password",
+      "role": "visitor"
     }
-    ],
-    "events":[
-        {
-            "id":"1",
-            "name": "Event title",
-            "description": "The description of the event",
-            "capacity":"15",
-            "date":"08-12-2024",
-            "visitorsEnrolledId":[
-                "2"
-            ]
-        }
-
-    ]
+  ],
+  "events": [
+    {
+      "id": "1",
+      "name": "Event title",
+      "description": "The description of the event",
+      "capacity": "15",
+      "date": "2024-05-02",
+      "visitorsEnrolledId": [
+        "2"
+      ]
+    },
+    {
+      "name": "dasd",
+      "description": "dadsfsd",
+      "capacity": "34",
+      "date": "2025-07-03",
+      "visitorsEnrolledId": [],
+      "id": "jy3mUuZ"
+    },
+    {
+      "name": "dmsakmdl",
+      "description": "mdlkasmdkl",
+      "capacity": "45",
+      "date": "2025-07-03",
+      "visitorsEnrolledId": [],
+      "id": "pPGuXzU"
+    },
+    {
+      "name": "dsad",
+      "description": "fdsfsdf",
+      "capacity": "213",
+      "date": "2025-07-04",
+      "visitorsEnrolledId": [],
+      "id": "6Jy8UPm"
+    }
+  ]
 }

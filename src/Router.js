@@ -4,8 +4,7 @@ import { viewDashboard, scriptDashboard } from "./views/private/dashboard.js";
 
 export const routes = {
     "#/logIn": [logInView, scriptLogIn],
-    "#/dashboard":[viewDashboard, scriptDashboard],
-    "#/dashborad/events": []
+    "#/dashboard":[viewDashboard, scriptDashboard]
 }
 
 
