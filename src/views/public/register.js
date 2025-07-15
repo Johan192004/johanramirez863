@@ -17,6 +17,7 @@ export function registerView(){
                             <label for="passwordC">Confirm Password</label>
                             <input type="password" name="passwordC" id="passwordC" class="form-control">
                             <button type="submit" class="btn btn-primary w-100 mt-3">Register</button>
+                            <a id="link">Do you have an account? Log in</a>
                         </form>
                     </div>
                 </div>
@@ -27,6 +28,11 @@ export function registerView(){
 
 
 export async function scriptRegister(){
+    const aLog = document.getElementById("link")
+    aLog.addEventListener("click",(e)=>{
+        e.preventDefault()
+        window.location.hash = ""
+    })
     const registerForm = document.getElementById("registerForm")
     const users = await getUsers()
     const emailField = document.getElementById("emailR")
