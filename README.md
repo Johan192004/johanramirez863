@@ -37,6 +37,16 @@ npm json-server db.json
 ### Open live server
 Install and run the extension of Visual studio Code, which is the one called **Live Server**
 
+### Admin credentials
+
+- email : david@gmail.com
+- password : password
+
+### Visitor credential
+
+- email : salomon@gmail.com
+- password : password
+
 
 ## Features
 
@@ -55,6 +65,8 @@ Install and run the extension of Visual studio Code, which is the one called **L
 ### Login
 
 ### Register
+
+
 
 ## Info
 
